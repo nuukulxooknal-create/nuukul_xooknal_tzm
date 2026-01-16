@@ -1,0 +1,200 @@
+/* Paleta de Colores Solicitada */
+:root {
+    --rosa-mexicano: #ff42aa; /* Rosa vibrante */
+    --amarillo-lapiz: #ffe521; /* Amarillo del logo */
+    --blanco: #FFFFFF;
+    --texto: #333333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blanco);
+    color: var(--texto);
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.main-header {
+    background: var(--blanco);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 10px solid var(--amarillo-lapiz);
+}
+
+.brand-badge {
+    background-color: var(--amarillo-lapiz);
+    color: var(--negro);
+    padding: 12px 35px;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 2rem;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.slogan {
+    color: var(--rosa-mexicano);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navegación */
+.navbar {
+    background: var(--rosa-mexicano);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navbar a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Contenedores y Títulos */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--rosa-mexicano);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: var(--amarillo-lapiz);
+    margin: 10px auto;
+}
+
+/* Historia y Bloques */
+.history-card {
+    background: var(--blanco);
+    padding: 40px;
+    border: 3px solid var(--amarillo-lapiz);
+    border-radius: 20px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.info-block {
+    border: 2px solid var(--rosa-mexicano);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.info-block h3 { color: var(--rosa-mexicano); margin-top: 0; }
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: var(--amarillo-lapiz);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* Valores */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.value-item {
+    padding: 15px;
+    background: #fff0f6; /* Un rosa muy suave para fondo */
+    border-radius: 8px;
+}
+
+.value-item strong { color: var(--rosa-mexicano); }
+
+/* Servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--blanco);
+    padding: 30px;
+    border: 2px solid var(--amarillo-lapiz);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--rosa-mexicano);
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-card li::before {
+    content: '★';
+    color: var(--amarillo-lapiz);
+    margin-right: 10px;
+}
+
+/* Footer */
+.main-footer {
+    background: var(--rosa-mexicano);
+    color: var(--blanco);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: var(--blanco);
+    font-size: 2rem;
+    margin: 0 15px;
+}
+
+.whatsapp-btn {
+    background: rgb(93, 255, 93);
+    color: var(--negro);
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .mission-vision-grid, .values-grid { grid-template-columns: 1fr; }
+}
